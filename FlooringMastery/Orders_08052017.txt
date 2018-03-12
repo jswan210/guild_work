@@ -1,0 +1,3 @@
+OrderNumber,CustomerName,State,TaxRate,ProductType,Area,CostPerSquareFoot,LaborCostPerSquareFoot,MaterialCost,LaborCost,Tax,Total
+12,Bob:: jones,MI,5.75,Tile,200.0,3.50,4.15,700.00,830.00,87.98,1617.98
+13,Another:: joanna,OH,6.25,Wood,40.0,5.15,4.75,206.00,190.00,24.75,420.75

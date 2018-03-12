@@ -1,0 +1,82 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+ http://www.springframework.org/schema/security
+ http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+
+    <beans:bean id="webexpressionHandler"
+                class="org.springframework.security.web.access.expression.DefaultWebSecurityExpressionHandler"/> 
+    
+    <beans:bean id="encoder"
+                class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/> 
+                
+    <http pattern="/login" security="none" />
+    <http pattern="/error" security="none" />
+    <http pattern="/css/**" security="none" />
+    <http pattern="/js/**" security="none" />
+    <http pattern="/img/**" security="none" />
+
+    <http auto-config="true" use-expressions="false">
+        <form-login login-processing-url="/j_spring_security_check"
+                    login-page="/login"
+                    authentication-failure-url="/login?login_error=1" />
+        
+                    <intercept-url pattern="/" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+                    <intercept-url pattern="/index" access="IS_AUTHENTICATED_ANONYMOUSLY" />  
+                     
+        <intercept-url pattern="/location/deleteLocation" access="ROLE_ADMIN" />
+         
+        <intercept-url pattern="/organization/deleteOrganization" access="ROLE_ADMIN" />
+        <intercept-url pattern="/organization/displayCreateOrganizationForm" access="ROLE_ADMIN" />
+        <intercept-url pattern="/organization/createOrganization" access="ROLE_ADMIN" />
+        <intercept-url pattern="/organization/createOrganizationError" access="ROLE_ADMIN" />
+        <intercept-url pattern="/organization/displayEditOrganization" access="ROLE_ADMIN" />
+        <intercept-url pattern="/organization/editOrganization" access="ROLE_ADMIN" />
+        <intercept-url pattern="/organization/editOrganizationError" access="ROLE_ADMIN" />
+        <intercept-url pattern="/superheroOrganization/deleteSuperheroOrganization" access="ROLE_ADMIN" />
+        
+        <intercept-url pattern="/superhero/deleteSuperhero" access="ROLE_ADMIN" />
+        
+        <intercept-url pattern="/superheroOrganization/deleteSuperheroOrganization" access="ROLE_ADMIN" />
+        
+        <intercept-url pattern="/superheroSighting/deleteSuperheroSigthing" access="ROLE_ADMIN" />
+    
+        <intercept-url pattern="/displayUserList" access="ROLE_ADMIN" />
+        <intercept-url pattern="/displayUserForm" access="ROLE_ADMIN" />
+        <intercept-url pattern="/deleteUser" access="ROLE_ADMIN" />
+        <intercept-url pattern="/editUser" access="ROLE_ADMIN" />
+
+        <intercept-url pattern="/*" access="ROLE_USER" />
+        
+        <intercept-url pattern="/location/*" access="ROLE_USER" />
+                       
+        <intercept-url pattern="/organization/*" access="ROLE_USER" />
+        
+        <intercept-url pattern="/superhero/displayEditSuperhero" access="ROLE_USER" />
+        <intercept-url pattern="/superhero/editSuperhero" access="ROLE_USER" />
+        <intercept-url pattern="/superhero/displayCreateSuperheroForm" access="ROLE_USER" />
+        <intercept-url pattern="/superhero/createSuperhero" access="ROLE_USER" />
+        
+        <intercept-url pattern="/superheroOrganization/*" access="ROLE_USER" />
+        
+        <intercept-url pattern="/superheroSighting/*" access="ROLE_USER" />
+        
+        
+        
+    </http>
+    <authentication-manager>
+        <authentication-provider>
+          
+            <password-encoder ref="encoder"/>
+            <jdbc-user-service id="userService"
+                               data-source-ref="dataSource"
+                               users-by-username-query=
+                        "select username, password, enabled from users where username=?"
+                               authorities-by-username-query=
+                        "select u.username, a.authority from authorities a join users u on a.user_id = u.user_id where u.username = ?" />
+            <!--   -->
+        </authentication-provider>
+    </authentication-manager>
+</beans:beans>

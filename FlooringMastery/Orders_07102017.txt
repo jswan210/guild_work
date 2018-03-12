@@ -1,0 +1,2 @@
+OrderNumber,CustomerName,State,TaxRate,ProductType,Area,CostPerSquareFoot,LaborCostPerSquareFoot,MaterialCost,LaborCost,Tax,Total
+4,NewGuy,MI,5.75,Laminate,300.0,1.75,2.10,525.00,630.00,66.41,1221.41

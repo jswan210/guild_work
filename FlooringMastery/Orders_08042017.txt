@@ -1,0 +1,5 @@
+OrderNumber,CustomerName,State,TaxRate,ProductType,Area,CostPerSquareFoot,LaborCostPerSquareFoot,MaterialCost,LaborCost,Tax,Total
+16,Swanson:: andStuff,PA,6.75,Carpet,20.0,2.25,2.10,45.00,42.00,5.87,92.87
+17,Anotherdude,PA,6.75,Wood,54.0,5.15,4.75,278.10,256.50,36.09,570.69
+12,Swanson:: Josh,PA,6.75,Carpet,49.0,2.25,2.10,110.25,102.90,14.39,227.54
+13,::Bob,PA,6.75,Wood,30.0,5.15,4.75,154.50,142.50,20.05,317.05

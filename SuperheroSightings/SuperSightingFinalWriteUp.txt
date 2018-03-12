@@ -1,0 +1,26 @@
+    What went well with this assignment?
+	Some fixes went well i thought i was in pretty good shape though i swear every step forward let me to a moment of some relaps
+	where things took a step back and had to figure something out before moving forward...
+
+
+
+    What did you struggle with?
+	Time...but thats on me...work requires OT and family requires me...ha
+	Struggled though within the extras (so getting maps to display markers and i didnt even attempt the picture)
+	With what i worked on had some trouble with how i was trying to set it up==meaning i didnt have an ID field within my sighting
+		so trying to update a sighitng without the single identifier it was a bit impossible at least in my attempts--going 
+		back and getting the id in was a quick and relatively simple fix
+	Date and time formatting from the SQL to the JSp was a little fun...went ok but took some time...
+	The wireframes...luckily i found some online program that helped...and didnt have to pay for that...
+	Moving through and seeing some things that i could really make better but because of, well, my time management 
+		better is gonna have to wait...
+	
+    How and where did you seek help with this assignment?
+	Not too much help sought out most issues as i have felt throughout the program was due to a misspelling or something similar
+		which often was the case so just re-reading it was my saving...some issues with NEtbeans losing its mind (or maybe 		Tomcat)--meaning a change made may have been right but i wasnt seeing the correct run because i first needed to shut 		all of it down and try again...it was frustrating...
+	But when i needed i looked to the java instrutors...
+	I know they changed policy during my second half but i think i would have benifited from the continued weekly meNtor meetings ( 		or at least every other...i dunno) 
+	
+
+    What unanswered questions do you still have?
+	I dunno im sure plenty...have i done this in a way of convensional programmers would have done it? i hope...but im sure im off 		some

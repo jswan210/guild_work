@@ -1,0 +1,4 @@
+OrderNumber,CustomerName,State,TaxRate,ProductType,Area,CostPerSquareFoot,LaborCostPerSquareFoot,MaterialCost,LaborCost,Tax,Total
+5,Swanson,OH,6.25,Carpet,45.0,2.25,2.10,101.25,94.50,12.23,207.98
+6,Bobstuff,PA,6.75,Tile,34.0,3.50,4.15,119.00,141.10,17.56,277.66
+7,Swanson,PA,6.75,Laminate,34.0,1.75,2.10,59.50,71.40,8.84,139.74
